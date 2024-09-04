@@ -1,5 +1,7 @@
 package com.example.functionaltraining.Models;
 
+import com.example.functionaltraining.DataAccess.DatabaseSQLite.Daos.UserDao;
+
 public class User {
     private String id;
     private String email;
@@ -13,6 +15,11 @@ public class User {
                 password != null && !password.isEmpty() &&
                 name != null && !name.isEmpty() &&
                 phone != null && !phone.isEmpty();
+    }
+
+    public boolean validateCredentialsUser() {
+        return email != null && !email.isEmpty() &&
+                password != null && !password.isEmpty();
     }
 
     public boolean validatePassEqualConfirPass() {
@@ -63,4 +70,8 @@ public class User {
     public void setId(String id) {
         this.id = id;
     }
+
+    //Metodos de consumos SQlite
+    public long initUserSection(UserDao dao){return dao.verifyUserCredentials(email, password);}
+    public int insertUser(UserDao dao){return (int) dao.insertUser(this);}
 }

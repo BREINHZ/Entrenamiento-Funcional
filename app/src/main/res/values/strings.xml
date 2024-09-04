@@ -15,8 +15,12 @@
     <string name="register_user">Registra tu Usuario</string>
     <string name="conf_password">Confirmar Contraseña</string>
     <string name="btn_create">Crear Usuario</string>
+    <string name="name">Nombre</string>
+    <string name="phone">Celular</string>
 
     <string name="title_home">Dashboard</string>
+    <string name="user">"El usuario "</string>
+    <string name="user_deslogueado">" se deslogueo"</string>
 
     <string name="user_create">Se creo correctamente el usuario</string>
     <string name="login_user">Se Logueo correctamente el usuario</string>
@@ -25,6 +29,6 @@
     <string name="credentials_incorrect">Credenciales</string>
     <string name="details_credentials_incorrect">Verificas tus credenciales, estan incorrectas</string>
     <string name="details_password">Los campos contraseña y confirmar contraseña no coinciden</string>
-    <string name="name">Nombre</string>
-    <string name="phone">Celular</string>
+    <string name="user_register_incorrectt">Ups,hubo un error al registarte. Intentalo nuevamente</string>
+    <string name="error_correo_formato">Formato de correo electrónico inválido</string>
 </resources>
