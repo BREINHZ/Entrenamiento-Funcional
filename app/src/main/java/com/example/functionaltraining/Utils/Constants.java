@@ -18,10 +18,10 @@ public class Constants {
             + "FOREIGN KEY (user_id) REFERENCES users(id)"
             + ")";
     public static final String CREATE_TABLE_USERS = "CREATE TABLE " + TABLE_USERS + "("
-            + "id TEXT PRIMARY KEY,"
-            + "email TEXT NOT NULL UNIQUE"
+            + "id INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + "email TEXT NOT NULL UNIQUE,"
             + "name TEXT NOT NULL,"
             + "phone TEXT NOT NULL,"
-            + "pass TEXT NOT NULL,"
+            + "pass TEXT NOT NULL"
             + ")";
 }

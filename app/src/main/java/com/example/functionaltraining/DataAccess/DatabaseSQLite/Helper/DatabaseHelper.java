@@ -19,16 +19,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CREATE_TABLE_USERS);
+
+        insertUserDefect(db);
     }
 
     private void insertUserDefect(SQLiteDatabase db){
         // Insertar un usuario por defecto
         ContentValues values = new ContentValues();
-        values.put("id", 1); // ID por defecto
         values.put("email", "admin@admin.com"); // Email por defecto
         values.put("name", "Admin"); // Nombre por defecto
         values.put("phone", "3121234568"); // Teléfono por defecto
-        values.put("pass", "1234Admin"); // Contraseña por defecto (deberías hashear la contraseña en una implementación real)
+        values.put("pass", "1234Admin"); // Contraseña por defecto
 
         db.insert(TABLE_USERS, null, values);
     }

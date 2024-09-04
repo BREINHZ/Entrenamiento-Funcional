@@ -63,14 +63,16 @@ public class UserDao {
         return userId;
     }
 
-    public boolean verifyUserCredentials(String email, String password) {
-        boolean isValid = false;
+    @SuppressLint("Range")
+    public long verifyUserCredentials(String email, String password) {
+        long userId = -1;
         Cursor cursor = null;
         try {
             // Consulta para buscar el usuario por correo y contraseña
             cursor = db.query(TABLE_USERS, new String[]{"id"}, "email = ? AND pass = ?", new String[]{email, password}, null, null, null);
             if (cursor != null && cursor.moveToFirst()) {
-                isValid = true;
+                // Obtiene el ID del usuario si las credenciales son correctas
+                userId = cursor.getLong(cursor.getColumnIndex("id"));
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -79,6 +81,6 @@ public class UserDao {
                 cursor.close();
             }
         }
-        return isValid;
+        return userId;
     }
 }
