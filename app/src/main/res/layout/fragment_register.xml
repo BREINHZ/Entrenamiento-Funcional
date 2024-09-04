@@ -57,12 +57,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_name_register">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_10dp"
-                android:layout_marginEnd="@dimen/_10dp"
-                android:text="@string/Email"/>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textField_email_register"
@@ -97,13 +91,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ll_container_email_register">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_10dp"
-                android:layout_marginEnd="@dimen/_10dp"
-                android:text="@string/name"/>
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textField_name_register"
                 android:layout_width="match_parent"
@@ -136,13 +123,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ll_container_name_register">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_10dp"
-                android:layout_marginEnd="@dimen/_10dp"
-                android:text="@string/phone"/>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textField_phone_register"
@@ -177,13 +157,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ll_container_phone_register">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_10dp"
-                android:layout_marginEnd="@dimen/_10dp"
-                android:text="@string/password"/>
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textField_pass_register"
                 android:layout_width="match_parent"
@@ -197,7 +170,7 @@
                     android:layout_height="45dp"
                     android:paddingStart="@dimen/_10dp"
                     tools:ignore="RtlSymmetry"
-                    android:inputType="textEmailAddress"
+                    android:inputType="textPassword"
                     android:background="@drawable/edt_email"
                     android:textColor="@color/black"/>
             </com.google.android.material.textfield.TextInputLayout>
@@ -212,7 +185,7 @@
             android:orientation="vertical"
             android:layout_marginStart="@dimen/_10dp"
             android:layout_marginEnd="@dimen/_10dp"
-            android:layout_marginTop="@dimen/_25dp"
+            android:layout_marginTop="@dimen/_16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ll_container_pass_register">

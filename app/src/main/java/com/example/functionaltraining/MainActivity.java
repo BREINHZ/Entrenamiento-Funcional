@@ -11,7 +11,6 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.functionaltraining.Presentation.AccessAcount.Login.Implementations.LoginFragment;
 import com.example.functionaltraining.Presentation.AccessAcount.SplashFragment;
-import com.example.functionaltraining.Presentation.Dash.Home.Implementations.HomeFragment;
 
 public class MainActivity extends AppCompatActivity {
 

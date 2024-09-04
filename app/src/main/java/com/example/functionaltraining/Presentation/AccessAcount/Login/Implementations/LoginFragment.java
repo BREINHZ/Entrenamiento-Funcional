@@ -24,7 +24,6 @@ public class LoginFragment extends BaseFragment {
     private UserDao dao;
     private TextInputEditText etEmailLogin;
     private EditText etPassLogin;
-    private User user;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -40,7 +39,7 @@ public class LoginFragment extends BaseFragment {
         Button btnStartSection = getCustomView().findViewById(R.id.btn_start_section);
 
         btnStartSection.setOnClickListener( v-> {
-            user = new User();
+            User user = new User();
             user.setEmail(etEmailLogin.getText().toString());
             user.setPassword(etPassLogin.getText().toString());
             presenter.startSection(user);
