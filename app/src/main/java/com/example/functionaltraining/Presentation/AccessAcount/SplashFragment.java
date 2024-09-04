@@ -9,9 +9,11 @@ import android.view.ViewGroup;
 import androidx.navigation.Navigation;
 
 import com.example.functionaltraining.Base.BaseFragment;
+import com.example.functionaltraining.DataAccess.SharedPreferences.SessionManager;
 import com.example.functionaltraining.R;
 
 public class SplashFragment extends BaseFragment {
+    private SessionManager sessionManager;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -24,8 +26,13 @@ public class SplashFragment extends BaseFragment {
     @Override
     public void onResume() {
         super.onResume();
+        sessionManager = new SessionManager(requireContext());
         new Handler().postDelayed(() -> {
-            Navigation.findNavController(requireView()).navigate(R.id.action_splashFragment_to_loginFragment);
+            if (sessionManager.isLoggedIn()) {
+                Navigation.findNavController(requireView()).navigate(R.id.action_splashFragment_to_homeFragment);
+            } else {
+                Navigation.findNavController(requireView()).navigate(R.id.action_splashFragment_to_loginFragment);
+            }
         }, 4000);
     }
 }
