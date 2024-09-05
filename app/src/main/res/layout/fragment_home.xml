@@ -10,15 +10,11 @@
     android:paddingBottom="@dimen/_35dp"
     tools:context=".Presentation.Dash.Home.ui.valoracion.HomeFragment">
 
-    <ImageView
-        android:id="@+id/iv_valoracion"
+    <WebView
+        android:id="@+id/webView"
+        android:layout_marginTop="@dimen/_100dp"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_200dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="@dimen/_100dp"
-        android:textAlignment="center"
-        android:src="@mipmap/ic_logo_app"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,13 +23,12 @@
         android:id="@+id/tv_valoracion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_margin="8dp"
         android:textAlignment="center"
         android:text="@string/description_valoración"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_valoracion" />
+        app:layout_constraintTop_toBottomOf="@+id/webView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

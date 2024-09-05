@@ -9,6 +9,11 @@ import com.example.functionaltraining.Base.BaseFragment;
 import com.example.functionaltraining.R;
 import com.example.functionaltraining.databinding.FragmentHomeBinding;
 
+import android.webkit.WebSettings;
+import android.webkit.WebViewClient;
+import android.widget.MediaController;
+import android.net.Uri;
+
 public class HomeFragment extends BaseFragment {
 
     private FragmentHomeBinding binding;
@@ -19,7 +24,13 @@ public class HomeFragment extends BaseFragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         setCustomView(binding.getRoot());
 
-        imagenOnline(getString(R.string.url_image_valoracion), binding.ivValoracion);
+        //imagenOnline(getString(R.string.url_image_valoracion), binding.ivValoracion);
+
+        WebSettings webSettings = binding.webView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+
+        binding.webView.setWebViewClient(new WebViewClient());
+        binding.webView.loadUrl("https://youtu.be/5uCFBKAI3dE");
 
         return getCustomView();
     }
