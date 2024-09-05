@@ -4,24 +4,26 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.example.functionaltraining.databinding.FragmentSlideshowBinding;
+import com.example.functionaltraining.databinding.FragmentRutinasBinding;
 
 public class RutinasFragment extends Fragment {
 
-    private FragmentSlideshowBinding binding;
+    private FragmentRutinasBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        binding = FragmentSlideshowBinding.inflate(inflater, container, false);
+        binding = FragmentRutinasBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textSlideshow;
+        final TextView tvRutinas = binding.tvRutinas;
+        final ImageView ivRutinas = binding.ivRutinas;
         return root;
     }
 
