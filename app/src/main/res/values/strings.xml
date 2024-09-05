@@ -63,5 +63,5 @@
     <string name="url_image_ejercicios"><![CDATA[https://img.freepik.com/vector-gratis/conjunto-personas-multietnicas-activas-entrenando-gimnasio_1262-19305.jpg?t=st=1725556508~exp=1725560108~hmac=327a0022731bec4bea8fc1b03bd244714843353abd800b46e4014c7b151bbd22&w=996]]></string>
     <string name="url_image_alimentos"><![CDATA[https://img.freepik.com/foto-gratis/vista-superior-surtido-verduras-bolsa-papel_23-2148853335.jpg?t=st=1725556614~exp=1725560214~hmac=8371428ff70e2594cc567b5fe1d97c6f8c7407ac5c458ff452ffedaca67367a9&w=740]]></string>
 
-    <string name="url_video_valoracion">https://www.youtube.com/watch?v=5uCFBKAI3dE</string>
+    <string name="url_video_valoracion"><![CDATA[https://youtu.be/5uCFBKAI3dE?rel=0&autoplay=1&showinfo=0&fullscreen=1]]></string>
 </resources>

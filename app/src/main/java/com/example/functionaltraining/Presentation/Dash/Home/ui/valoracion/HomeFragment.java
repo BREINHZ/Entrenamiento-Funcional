@@ -9,6 +9,7 @@ import com.example.functionaltraining.Base.BaseFragment;
 import com.example.functionaltraining.R;
 import com.example.functionaltraining.databinding.FragmentHomeBinding;
 
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebViewClient;
 import android.widget.MediaController;
@@ -26,11 +27,11 @@ public class HomeFragment extends BaseFragment {
 
         //imagenOnline(getString(R.string.url_image_valoracion), binding.ivValoracion);
 
+        String video = "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/5uCFBKAI3dE\" title=\"Examen físico del adulto\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>";
+        binding.webView.loadData(video, "text/html", "utf-8");
         WebSettings webSettings = binding.webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
-
-        binding.webView.setWebViewClient(new WebViewClient());
-        binding.webView.loadUrl("https://youtu.be/5uCFBKAI3dE");
+        binding.webView.setWebChromeClient(new WebChromeClient());
 
         return getCustomView();
     }

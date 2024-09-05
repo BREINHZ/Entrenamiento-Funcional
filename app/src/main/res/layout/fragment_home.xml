@@ -12,9 +12,12 @@
 
     <WebView
         android:id="@+id/webView"
-        android:layout_marginTop="@dimen/_100dp"
+        android:layout_marginTop="@dimen/_50dp"
+        android:layout_marginStart="@dimen/_10dp"
+        android:layout_marginEnd="@dimen/_10dp"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_200dp"
+        android:layout_height="@dimen/_300dp"
+        android:padding="@dimen/_4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
