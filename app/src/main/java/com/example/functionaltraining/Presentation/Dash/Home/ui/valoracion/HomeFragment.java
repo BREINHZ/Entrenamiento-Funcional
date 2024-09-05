@@ -4,16 +4,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
-
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
-
+import com.example.functionaltraining.Base.BaseFragment;
+import com.example.functionaltraining.R;
 import com.example.functionaltraining.databinding.FragmentHomeBinding;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends BaseFragment {
 
     private FragmentHomeBinding binding;
 
@@ -21,11 +17,11 @@ public class HomeFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
+        setCustomView(binding.getRoot());
 
-        final TextView tvValoracion = binding.tvValoracion;
-        final ImageView ivValoracion = binding.ivValoracion;
-        return root;
+        imagenOnline(getString(R.string.url_image_valoracion), binding.ivValoracion);
+
+        return getCustomView();
     }
 
     @Override

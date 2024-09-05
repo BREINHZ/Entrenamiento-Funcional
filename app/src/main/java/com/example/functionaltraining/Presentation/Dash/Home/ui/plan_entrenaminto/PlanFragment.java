@@ -6,13 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-
+import com.example.functionaltraining.Base.BaseFragment;
+import com.example.functionaltraining.R;
 import com.example.functionaltraining.databinding.FragmentPlanBinding;
 
-public class PlanFragment extends Fragment {
+public class PlanFragment extends BaseFragment {
 
     private FragmentPlanBinding binding;
 
@@ -20,11 +19,17 @@ public class PlanFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
 
         binding = FragmentPlanBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
+        setCustomView(binding.getRoot());
 
-        final TextView tvPlan = binding.tvPlan;
-        final ImageView ivPlan = binding.ivPlan;
-        return root;
+        imagenOnline(getString(R.string.url_image_plan), binding.ivPlan);
+
+        return getCustomView();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
     }
 
     @Override

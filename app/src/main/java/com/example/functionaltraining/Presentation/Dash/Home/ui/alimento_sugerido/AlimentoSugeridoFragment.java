@@ -4,13 +4,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
+import com.example.functionaltraining.Base.BaseFragment;
+import com.example.functionaltraining.R;
 import com.example.functionaltraining.databinding.FragmentAlimentosBinding;
 
-public class AlimentoSugeridoFragment extends Fragment {
+public class AlimentoSugeridoFragment extends BaseFragment {
 
     private FragmentAlimentosBinding binding;
 
@@ -18,11 +17,11 @@ public class AlimentoSugeridoFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
 
         binding = FragmentAlimentosBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
+        setCustomView(binding.getRoot());
 
-        final TextView tvAlimentos = binding.tvAlimentos;
-        final ImageView ivAlimentos = binding.ivAlimentos;
-        return root;
+        imagenOnline(getString(R.string.url_image_alimentos), binding.ivAlimentos);
+
+        return getCustomView();
     }
 
     @Override

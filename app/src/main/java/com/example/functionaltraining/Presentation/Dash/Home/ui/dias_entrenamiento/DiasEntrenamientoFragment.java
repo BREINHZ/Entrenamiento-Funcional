@@ -4,13 +4,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
+import com.example.functionaltraining.Base.BaseFragment;
+import com.example.functionaltraining.R;
 import com.example.functionaltraining.databinding.FragmentDiasBinding;
 
-public class DiasEntrenamientoFragment extends Fragment {
+public class DiasEntrenamientoFragment extends BaseFragment {
 
     private FragmentDiasBinding binding;
 
@@ -18,11 +17,11 @@ public class DiasEntrenamientoFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
 
         binding = FragmentDiasBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
+        setCustomView(binding.getRoot());
 
-        final TextView tvDias = binding.tvDias;
-        final ImageView ivDias = binding.ivDias;
-        return root;
+        imagenOnline(getString(R.string.url_image_dias), binding.ivDias);
+
+        return getCustomView();
     }
 
     @Override

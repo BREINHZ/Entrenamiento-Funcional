@@ -4,15 +4,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
-
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-
+import com.example.functionaltraining.Base.BaseFragment;
+import com.example.functionaltraining.R;
 import com.example.functionaltraining.databinding.FragmentRutinasBinding;
 
-public class RutinasFragment extends Fragment {
+public class RutinasFragment extends BaseFragment {
 
     private FragmentRutinasBinding binding;
 
@@ -20,11 +17,11 @@ public class RutinasFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
 
         binding = FragmentRutinasBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
+        setCustomView(binding.getRoot());
 
-        final TextView tvRutinas = binding.tvRutinas;
-        final ImageView ivRutinas = binding.ivRutinas;
-        return root;
+        imagenOnline(getString(R.string.url_image_rutinas), binding.ivRutinas);
+
+        return getCustomView();
     }
 
     @Override

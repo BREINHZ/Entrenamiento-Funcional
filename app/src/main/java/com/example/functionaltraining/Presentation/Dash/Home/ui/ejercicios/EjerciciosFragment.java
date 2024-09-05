@@ -4,15 +4,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
-
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-
+import com.example.functionaltraining.Base.BaseFragment;
+import com.example.functionaltraining.R;
 import com.example.functionaltraining.databinding.FragmentEjerciciosBinding;
 
-public class EjerciciosFragment extends Fragment {
+public class EjerciciosFragment extends BaseFragment {
 
     private FragmentEjerciciosBinding binding;
 
@@ -20,11 +17,11 @@ public class EjerciciosFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
 
         binding = FragmentEjerciciosBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
+        setCustomView(binding.getRoot());
 
-        final TextView tvEjercicios = binding.tvEjercicios;
-        final ImageView ivEjercicios = binding.ivEjercicios;
-        return root;
+        imagenOnline(getString(R.string.url_image_ejercicios), binding.ivEjercicios);
+
+        return getCustomView();
     }
 
     @Override
