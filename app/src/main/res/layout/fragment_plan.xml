@@ -7,15 +7,15 @@
     android:layout_height="match_parent"
     tools:context=".Presentation.Dash.Home.ui.plan_entrenaminto.PlanFragment">
 
-    <ImageView
-        android:id="@+id/iv_plan"
+
+    <WebView
+        android:id="@+id/webView_plan"
+        android:layout_marginTop="@dimen/_50dp"
+        android:layout_marginStart="@dimen/_10dp"
+        android:layout_marginEnd="@dimen/_10dp"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_200dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="@dimen/_100dp"
-        android:textAlignment="center"
-        android:src="@mipmap/ic_logo_app"
+        android:layout_height="@dimen/_300dp"
+        android:padding="@dimen/_4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -31,6 +31,6 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_plan" />
+        app:layout_constraintTop_toBottomOf="@+id/webView_plan" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

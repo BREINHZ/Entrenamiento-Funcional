@@ -5,6 +5,9 @@ import android.annotation.SuppressLint;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import androidx.fragment.app.Fragment;
 import com.example.functionaltraining.R;
@@ -37,12 +40,19 @@ public class BaseFragment extends Fragment {
     }
 
     public void imagenOnline(String imageUrl, ImageView imageView){
-        // Usar Glide para cargar la imagen
         Picasso.get()
                 .load(imageUrl) // URL de la imagen
                 .placeholder(R.drawable.splash_image) // Imagen de carga temporal
                 .error(R.drawable.splash_image) // Imagen de error si la URL no funciona
                 .into(imageView); // Donde se cargará la imagen
+    }
+
+    public void showYoutubeVideo(WebView webView, String url){
+        String video =  String.format("<iframe width=\"100%%\" height=\"100%%\" src=\"%s\" title=\"Examen físico del adulto\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>", url);
+        webView.loadData(video, "text/html", "utf-8");
+        WebSettings webSettings = webView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        webView.setWebChromeClient(new WebChromeClient());
     }
 
     public void hideKeyboardFragment(){

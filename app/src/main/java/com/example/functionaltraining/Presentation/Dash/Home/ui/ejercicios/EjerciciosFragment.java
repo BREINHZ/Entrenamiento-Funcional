@@ -19,7 +19,7 @@ public class EjerciciosFragment extends BaseFragment {
         binding = FragmentEjerciciosBinding.inflate(inflater, container, false);
         setCustomView(binding.getRoot());
 
-        imagenOnline(getString(R.string.url_image_ejercicios), binding.ivEjercicios);
+        showYoutubeVideo(binding.webViewEjercicios, getString(R.string.url_video_ejercicios));
 
         return getCustomView();
     }

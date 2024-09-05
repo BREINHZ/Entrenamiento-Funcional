@@ -21,7 +21,7 @@ public class PlanFragment extends BaseFragment {
         binding = FragmentPlanBinding.inflate(inflater, container, false);
         setCustomView(binding.getRoot());
 
-        imagenOnline(getString(R.string.url_image_plan), binding.ivPlan);
+        showYoutubeVideo(binding.webViewPlan, getString(R.string.url_video_plan));
 
         return getCustomView();
     }
