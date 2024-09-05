@@ -1,5 +1,6 @@
 package com.example.functionaltraining.Presentation.AccessAcount.Login.Implementations;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,7 @@ import com.example.functionaltraining.Base.BaseFragment;
 import com.example.functionaltraining.DataAccess.DatabaseSQLite.Daos.UserDao;
 import com.example.functionaltraining.Models.User;
 import com.example.functionaltraining.Presentation.AccessAcount.Login.Interfaces.ILoginView;
+import com.example.functionaltraining.Presentation.Dash.Home.HomeActivity;
 import com.example.functionaltraining.R;
 import com.example.functionaltraining.Utils.DialogueGenerico;
 import com.google.android.material.textfield.TextInputEditText;
@@ -53,7 +55,8 @@ public class LoginFragment extends BaseFragment {
         @Override
         public void credentialsCorrect() {
             Toast.makeText(getContext(), getString(R.string.login_user), Toast.LENGTH_SHORT).show();
-            Navigation.findNavController(requireView()).navigate(R.id.action_loginFragment_to_homeFragment);
+            Intent intent = new Intent(getActivity(), HomeActivity.class);
+            startActivity(intent);
         }
 
         @Override

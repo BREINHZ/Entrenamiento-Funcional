@@ -32,6 +32,7 @@ public class SessionManager {
     public String getUserEmail() {
         return pref.getString(KEY_EMAIL, null);
     }
+
     public String getUseId() {
         return pref.getString(KEY_USER_ID, null);
     }

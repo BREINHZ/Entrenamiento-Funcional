@@ -1,4 +1,4 @@
-package com.example.functionaltraining;
+package com.example.functionaltraining.Presentation.AccessAcount;
 
 import android.annotation.SuppressLint;
 import android.content.pm.ActivityInfo;
@@ -10,7 +10,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.functionaltraining.Presentation.AccessAcount.Login.Implementations.LoginFragment;
-import com.example.functionaltraining.Presentation.AccessAcount.SplashFragment;
+import com.example.functionaltraining.R;
 
 public class MainActivity extends AppCompatActivity {
 

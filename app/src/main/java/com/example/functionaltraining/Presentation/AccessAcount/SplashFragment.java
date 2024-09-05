@@ -1,5 +1,6 @@
 package com.example.functionaltraining.Presentation.AccessAcount;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import androidx.navigation.Navigation;
 
 import com.example.functionaltraining.Base.BaseFragment;
 import com.example.functionaltraining.DataAccess.SharedPreferences.SessionManager;
+import com.example.functionaltraining.Presentation.Dash.Home.HomeActivity;
 import com.example.functionaltraining.R;
 
 public class SplashFragment extends BaseFragment {
@@ -29,7 +31,8 @@ public class SplashFragment extends BaseFragment {
         sessionManager = new SessionManager(requireContext());
         new Handler().postDelayed(() -> {
             if (sessionManager.isLoggedIn()) {
-                Navigation.findNavController(requireView()).navigate(R.id.action_splashFragment_to_homeFragment);
+                Intent intent = new Intent(getActivity(), HomeActivity.class);
+                startActivity(intent);
             } else {
                 Navigation.findNavController(requireView()).navigate(R.id.action_splashFragment_to_loginFragment);
             }
